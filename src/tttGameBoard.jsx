@@ -6,16 +6,21 @@ function DisplayGameboard({ board }) {
     return board.map((row, i) => {
       return (
         <div className="row" key={i}>
-          <Cells row={row} />
+          <Cells row={row} rowIndex={i} />
         </div>
       );
     });
   };
 
-  const Cells = ({ row }) => {
+  const Cells = ({ row, rowIndex }) => {
     return row.map((cell, j) => {
+      function handleClick() {
+        console.log("Cell index: " + j);
+        console.log("Row Index: " + rowIndex);
+      }
+
       return (
-        <div className="cell" key={j}>
+        <div className="cell" key={j} onClick={handleClick}>
           {cell}
         </div>
       );
@@ -31,9 +36,9 @@ function DisplayGameboard({ board }) {
 
 export default function TicTacToeBoard() {
   const [board, setBoard] = useState([
-    [0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8],
+    ["", "", ""],
+    ["X", "X", "X"],
+    ["O", "O", "O"],
   ]);
 
   return <DisplayGameboard board={board} />;
