@@ -43,3 +43,14 @@ export default function TicTacToeBoard() {
 
   return <DisplayGameboard board={board} />;
 }
+
+/*
+TODO: Implement a function/functions to check whether there is a match in the:
+TODO:     - Horizontal
+TODO:     - Vertical
+TODO:     - Diagonal
+TODO: positions.
+
+! Write tests before writing functions :)
+
+*/
