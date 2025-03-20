@@ -1,6 +1,7 @@
 import { useState } from "react";
+import "./tttGameBoard.css";
 
-export function DisplayGameboard({ board }) {
+function DisplayGameboard({ board }) {
   const Rows = ({ board }) => {
     return board.map((row, i) => {
       return (
