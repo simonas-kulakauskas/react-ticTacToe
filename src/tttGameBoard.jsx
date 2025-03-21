@@ -44,6 +44,17 @@ function DisplayGameboard({ board }) {
   );
 }
 
+export function checkMatch(row) {
+  // ? Could I shrink this logic down?
+  if (row[0] && row[1] && row[2] === 1) {
+    return 1;
+  } else if (row[0] && row[1] && row[2] === 2) {
+    return 2;
+  } else {
+    return 0;
+  }
+}
+
 export default function TicTacToeBoard() {
   const [board, setBoard] = useState([
     [0, 0, 0],
