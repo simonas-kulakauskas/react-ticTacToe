@@ -37,10 +37,18 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
+  gap: 0.25em;
 }
 
 .cell {
-  border: 1px solid red;
+  font-size: 3em;
+  border: 0.5rem solid green;
+  border-radius: 1.5rem;
   min-width: 100px;
   min-height: 100px;
+
+  /* Centre text inside cells */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
